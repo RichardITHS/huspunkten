@@ -37,4 +37,17 @@ box-sizing: border-box;
 }
 /*Above Validated 2022-09-08 10:33*/
 
+/*2. Body, html settings*/
+body, html{
+    /*Make it so that all space is stretched*/
+    margin:0;
+    padding:0;
+    /*no overflow*/
+    overflow-x: hidden;
+    height:100%;
+    /*Using my pre-decided colors using "var() function*/
+    background-color: var(--five);
+}
+
+/*Above Validated 2022-09-08 10:53*/
 
