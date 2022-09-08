@@ -4,8 +4,8 @@
 /*Description
 1. Root settings
 2. Body, html settings
-3. Navbar
-4.
+3. Buttons
+4. Navbar
 5.
 6.
 7.
@@ -50,4 +50,62 @@ body, html{
 }
 
 /*Above Validated 2022-09-08 10:53*/
+
+/*3. Buttons*/
+/*Button 1*/
+
+.btn {
+    border: none;
+
+    background-color:var(--six);
+    
+    /*Rounded edges on box/button*/
+    border-radius:8px;
+
+    display:inline-block;
+    /*Show visually that an element is clickable*/
+    cursor:pointer;
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    padding:13px 32px;
+
+    text-decoration:none;   
+
+}
+
+
+
+
+/*Button 2*/
+
+.btn2 {
+
+    border: none;
+
+    background-color:var(--black);
+
+    border-radius:8px;
+
+    display:inline-block;
+
+    cursor:pointer;
+
+    color:#ffffff;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    padding:13px 32px;
+
+    text-decoration:none;
+
+}
+
+/*Above Validated 2022-09-08 11:02*/
 
