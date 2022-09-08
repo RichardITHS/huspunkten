@@ -133,6 +133,7 @@ body, html{
  color:var(--white);
  font-weight: bold;
  margin-left: 2vw;
+ 
 }
 
 /*Clarify that the backround on the links is in the same color as the navbar itself*/
@@ -161,7 +162,6 @@ body, html{
 }
 
 .navbar-links li:hover{
-    font-weight: 900;
     text-decoration: underline;
 }
 
@@ -178,6 +178,7 @@ body, html{
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
+    height:21px;
 
 }
 
@@ -187,6 +188,7 @@ body, html{
     width: 100%;
     background-color: var(--white);
     border-radius: 10%;
+    
 }
 
 /*Make the navabar responsive*/
@@ -220,6 +222,10 @@ body, html{
 
     .navbar-links.active{
         display: flex;
+    }
+
+    .brand-title{
+        margin-top: 2vw;
     }
 
 }
