@@ -7,7 +7,7 @@
 3. Buttons
 4. Navbar
 5. Hero Section (Hero image)
-6.
+6. Testimonial Section
 7.
 */
 
@@ -273,6 +273,53 @@ body, html{
 }
 
 /*Validated Ok*/
+
+/*6. Testimonial Section*/
+/*Grid*/
+
+.testimonial-grid-container{
+    /*Decide that this is a grid*/
+    display: grid;
+    /*grid-template-columns*/
+    grid-template-columns:1fr 1fr 1fr 1fr;
+      /*grid-template-rows*/
+    grid-template-rows: 1fr 1fr;
+    gap:20px;
+    row-gap: 10vh;
+
+    /*Grid area*/
+    grid-template-areas: 
+    "comment1 comment1 comment2 comment2"
+    "comment3 comment3 comment4 comment4";
+
+}
+
+#comment1{
+    grid-area: comment1;
+    border-radius: 8px;
+    background-image: url(/img/family.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#comment2{
+    /*Always declare what grid area you want the "#item" to be, in this example
+    it is the second column called comment2*/
+    grid-area: comment2;
+    background-color: var(--two);
+    border-radius:8px;
+    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+    color: var(--white);
+}
+
+
+
+
+
+
 
 
 
