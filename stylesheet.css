@@ -1,0 +1,40 @@
+/*Importing Google web font roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Description
+1. Root settings
+2. Body, html settings
+3. Navbar
+4.
+5.
+6.
+7.
+*/
+
+/*1. Root settings*/
+*{
+font-family: roboto;
+
+/*No invisble borders, margins or padding on the box*/
+box-sizing: border-box;
+/*Declare the colors on the website */
+    --one: #026873;
+
+    --two: #0596A6;
+
+    --three: #03A6A6;
+
+    --four: #222d38;
+
+    --five: #DAD3C8;
+
+    --black: black;
+
+    --six: #726651;
+
+    --white: #ffffff;
+
+}
+/*Above Validated 2022-09-08 10:33*/
+
+
