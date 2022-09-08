@@ -350,7 +350,29 @@ body, html{
 
 /*Making grid responsive*/
 @media screen and (max-width:550px){
-    
+    .testimonial-grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 4fr;
+        row-gap: 5vh;
+        grid-template-areas: 
+        "comment1"
+        "comment2"
+        "comment3"
+        "comment4"
+    }
+
+    #comment1{
+        height:70vh;
+    }
+    #comment2{
+        height:70vh;
+    }
+    #comment3{
+        height:50vh;
+    }
+    #comment4{
+        height:50vh;
+    }
 }
 
 
