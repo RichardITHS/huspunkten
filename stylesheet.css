@@ -286,6 +286,10 @@ body, html{
     grid-template-rows: 1fr 1fr;
     gap:20px;
     row-gap: 10vh;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    margin-top: 10vh;
+    height:90vh;
 
     /*Grid area*/
     grid-template-areas: 
@@ -313,6 +317,40 @@ body, html{
     align-items: center;
     padding-top: 20px;
     color: var(--white);
+}
+
+#comment2 h2{
+    margin-top:10vh;
+}
+
+#comment3{
+    /*Always declare what grid area you want the "#item" to be, in this example
+    it is the second column called comment2*/
+    grid-area: comment3;
+    background-color: var(--two);
+    border-radius:8px;
+    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+    color: var(--white);
+}
+
+#comment3 h2{
+    margin-top:10vh;
+}
+
+#comment4{
+    grid-area: comment4;
+    border-radius: 8px;
+    background-image: url(/img/office-820390_1920.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Making grid responsive*/
+@media screen and (max-width:550px){
+    
 }
 
 
