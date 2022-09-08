@@ -139,7 +139,7 @@ body, html{
 /*Clarify that the backround on the links is in the same color as the navbar itself*/
 .navbar-links{
     height:100%;
-    background-color:var(four);
+    background-color: var(--four);
 }
 
 /*Adjusting the link settings*/
@@ -239,7 +239,7 @@ body, html{
 /*5. Hero Section*/
 
 .hero-image{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url(/img/hus1.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/hus1.jpg);
     height:120vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -258,14 +258,22 @@ body, html{
 
 .hero-text h1{
     font-size: 4rem;
-    font-weight: 800;
+    font-weight:800
 }
 
 .hero-image .btn{
     margin-top: 5vw;
 }
 
-@media
+/*Adjusting image height to fit all screens on all devices, top to down*/
+@media only screen and (max-width:550px){
+    .hero-image{
+        height: 140vh;
+    }
+}
+
+
+
 
 
 
