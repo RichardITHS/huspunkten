@@ -1,5 +1,5 @@
 /*Importing Google web font roboto*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 /*Description
 1. Root settings
@@ -8,45 +8,45 @@
 4. Navbar
 5. Hero Section (Hero image)
 6. Testimonial Section
-7.
+7. Slideshow
 */
 
 /*1. Root settings*/
-*{
-font-family: roboto;
+* {
+  font-family: roboto;
 
-/*No invisble borders, margins or padding on the box*/
-box-sizing: border-box;
-/*Declare the colors on the website */
-    --one: #026873;
+  /*No invisble borders, margins or padding on the box*/
+  box-sizing: border-box;
+  /*Declare the colors on the website */
+  --one: #026873;
 
-    --two: #0596A6;
+  --two: #0596a6;
 
-    --three: #03A6A6;
+  --three: #03a6a6;
 
-    --four: #222d38;
+  --four: #222d38;
 
-    --five: #DAD3C8;
+  --five: #dad3c8;
 
-    --black: black;
+  --black: black;
 
-    --six: #726651;
+  --six: #726651;
 
-    --white: #ffffff;
-
+  --white: #ffffff;
 }
 /*Above Validated 2022-09-08 10:33*/
 
 /*2. Body, html settings*/
-body, html{
-    /*Make it so that all space is stretched*/
-    margin:0;
-    padding:0;
-    /*no overflow*/
-    overflow-x: hidden;
-    height:100%;
-    /*Using my pre-decided colors using "var() function*/
-    background-color: var(--five);
+body,
+html {
+  /*Make it so that all space is stretched*/
+  margin: 0;
+  padding: 0;
+  /*no overflow*/
+  overflow-x: hidden;
+  height: 100%;
+  /*Using my pre-decided colors using "var() function*/
+  background-color: var(--five);
 }
 
 /*Above Validated 2022-09-08 10:53*/
@@ -55,221 +55,211 @@ body, html{
 /*Button 1*/
 
 .btn {
-    border: none;
+  border: none;
 
-    background-color:var(--six);
-    
-    /*Rounded edges on box/button*/
-    border-radius:8px;
+  background-color: var(--six);
 
-    display:inline-block;
-    /*Show visually that an element is clickable*/
-    cursor:pointer;
+  /*Rounded edges on box/button*/
+  border-radius: 8px;
 
-    color:#ffffff;
+  display: inline-block;
+  /*Show visually that an element is clickable*/
+  cursor: pointer;
 
-    font-size:20px;
+  color: #ffffff;
 
-    font-weight:bold;
+  font-size: 20px;
 
-    padding:13px 32px;
+  font-weight: bold;
 
-    text-decoration:none;   
+  padding: 13px 32px;
 
+  text-decoration: none;
 }
-
-
-
 
 /*Button 2*/
 
 .btn2 {
+  border: none;
 
-    border: none;
+  background-color: var(--black);
 
-    background-color:var(--black);
+  border-radius: 8px;
 
-    border-radius:8px;
+  display: inline-block;
 
-    display:inline-block;
+  cursor: pointer;
 
-    cursor:pointer;
+  color: #ffffff;
 
-    color:#ffffff;
+  font-size: 20px;
 
-    font-size:20px;
+  font-weight: bold;
 
-    font-weight:bold;
+  padding: 13px 32px;
 
-    padding:13px 32px;
+  text-decoration: none;
 
-    text-decoration:none;
-
+  margin-top: 2vh;
 }
 
 /*Above Validated 2022-09-08 11:02*/
 
 /*4. Navbar*/
 /*Navbar with flex method*/
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    height:8vh;
-    width: 100%;
-    position: fixed;
-    align-items: center;
-    margin: 0 auto;
-    background-color: var(--four);
-    /*Placing objects in order/layers*/
-    z-index:999;
-    top:0;
-    left:0;
-    transition: 0.3s ease-in-out;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+  width: 100%;
+  position: fixed;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--four);
+  /*Placing objects in order/layers*/
+  z-index: 999;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
 }
 
 /*Logo/title settings*/
-.brand-title{
- font-size: 1.5rem;
- color:var(--white);
- font-weight: bold;
- margin-left: 2vw;
- 
+.brand-title {
+  font-size: 1.5rem;
+  color: var(--white);
+  font-weight: bold;
+  margin-left: 2vw;
 }
 
 /*Clarify that the backround on the links is in the same color as the navbar itself*/
-.navbar-links{
-    height:100%;
-    background-color: var(--four);
+.navbar-links {
+  height: 100%;
+  background-color: var(--four);
 }
 
 /*Adjusting the link settings*/
 
-.navbar-links ul{
-    display:flex;
-    padding:0; 
-    margin-top: 1vh;
-   
+.navbar-links ul {
+  display: flex;
+  padding: 0;
+  margin-top: 1vh;
 }
 
-.navbar-links li{
-    list-style: none;
+.navbar-links li {
+  list-style: none;
 }
 
-.navbar-links li a{
-    text-decoration: none;
-    color:var(--white);
-    padding: 0.5rem;
-    margin:2vw;
+.navbar-links li a {
+  text-decoration: none;
+  color: var(--white);
+  padding: 0.5rem;
+  margin: 2vw;
 }
 
-.navbar-links li:hover{
-    text-decoration: underline;
+.navbar-links li:hover {
+  text-decoration: underline;
 }
 
 /*Only visible in responsive mode, handled by javascript*/
-.toggle-button{
-    /*The absolute means it will always be in the position that you have decided
+.toggle-button {
+  /*The absolute means it will always be in the position that you have decided
     therefore we need to use the top, right, bottom, left rule*/
-    position: absolute;
-    top: .75rem;
-    right:1rem;
-    /*Display none can be used everywhere and anytime but mostly when we
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  /*Display none can be used everywhere and anytime but mostly when we
     want an element to be shown at a certain pixel widht (responsive)*/
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height:21px;
-
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
 }
 
 /*Creating the bar style*/
-.toggle-button .bar{
-    height:3px;
-    width: 100%;
-    background-color: var(--white);
-    border-radius: 10%;
-    
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 10%;
 }
 
 /*Make the navbar responsive*/
-@media screen and (max-width: 400px){
-    .navbar{
-        flex-direction: column;
-        align-items: flex-start;
-        
-    }
+@media screen and (max-width: 400px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-    .toggle-button{
-        display: flex;
-    }
+  .toggle-button {
+    display: flex;
+  }
 
-    .navbar-links{
-        display: none;
-        width: 100%;
-        height:20vh;
-    }
+  .navbar-links {
+    display: none;
+    width: 100%;
+    height: 20vh;
+  }
 
-    .navbar-links ul{
-        width: 100%;
-        flex-direction: column;
-    }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
 
-    .navbar-links ul li{
-        text-align: center;
-    }
+  .navbar-links ul li {
+    text-align: center;
+  }
 
-    .navbar-links ul li a{
-        padding: .05rem 1rem;
-    }
+  .navbar-links ul li a {
+    padding: 0.05rem 1rem;
+  }
 
-    .navbar-links.active{
-        display: flex;
-        background-color: var(--four);
-      
-    }
+  .navbar-links.active {
+    display: flex;
+    background-color: var(--four);
+  }
 
-    .brand-title{
-        margin-top: 2vw;
-    }
-
+  .brand-title {
+    margin-top: 2vw;
+  }
 }
 /*Validated Ok*/
 
 /*5. Hero Section*/
 
-.hero-image{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/hus1.jpg);
-    height:120vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;    
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/img/hus1.jpg);
+  height: 120vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
-.hero-text{
-    text-align: center;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    color: var(--white);
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
 }
 
-.hero-text h1{
-    font-size: 4rem;
-    font-weight:800
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 800;
 }
 
-.hero-image .btn{
-    margin-top: 5vw;
+.hero-image .btn {
+  margin-top: 5vw;
 }
 
 /*Adjusting image height to fit all screens on all devices, top to down*/
-@media only screen and (max-width:550px){
-    .hero-image{
-        height: 140vh;
-    }
+@media only screen and (max-width: 550px) {
+  .hero-image {
+    height: 140vh;
+  }
 }
 
 /*Validated Ok*/
@@ -277,125 +267,126 @@ body, html{
 /*6. Testimonial Section*/
 /*Grid*/
 
-.testimonial-grid-container{
-    /*Decide that this is a grid*/
-    display: grid;
-    /*grid-template-columns*/
-    grid-template-columns:1fr 1fr 1fr 1fr;
-      /*grid-template-rows*/
-    grid-template-rows: 1fr 1fr;
-    gap:20px;
-    row-gap: 10vh;
-    margin-right: 10vw;
-    margin-left: 10vw;
-    margin-top: 10vh;
-    height:90vh;
+.testimonial-grid-container {
+  /*Decide that this is a grid*/
+  display: grid;
+  /*grid-template-columns*/
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*grid-template-rows*/
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  row-gap: 10vh;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  margin-top: 10vh;
+  height: 90vh;
 
-    /*Grid area*/
-    grid-template-areas: 
+  /*Grid area*/
+  grid-template-areas:
     "comment1 comment1 comment2 comment2"
     "comment3 comment3 comment4 comment4";
-
 }
 
-#comment1{
-    grid-area: comment1;
-    border-radius: 8px;
-    background-image: url(/img/family.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#comment1 {
+  grid-area: comment1;
+  border-radius: 8px;
+  background-image: url(/img/family.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#comment2{
-    /*Always declare what grid area you want the "#item" to be, in this example
+#comment2 {
+  /*Always declare what grid area you want the "#item" to be, in this example
     it is the second column called comment2*/
-    grid-area: comment2;
-    background-color: var(--two);
-    border-radius:8px;
-    text-align: center;
-    align-items: center;
-    padding-top: 20px;
-    color: var(--white);
+  grid-area: comment2;
+  background-color: var(--two);
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  color: var(--white);
 }
 
-#comment2 h2{
-    margin-top:10vh;
+#comment2 h2 {
+  margin-top: 10vh;
 }
 
-#comment3{
-    /*Always declare what grid area you want the "#item" to be, in this example
+#comment3 {
+  /*Always declare what grid area you want the "#item" to be, in this example
     it is the second column called comment2*/
-    grid-area: comment3;
-    background-color: var(--two);
-    border-radius:8px;
-    text-align: center;
-    align-items: center;
-    padding-top: 20px;
-    color: var(--white);
+  grid-area: comment3;
+  background-color: var(--two);
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+  color: var(--white);
 }
 
-#comment3 h2{
-    margin-top:10vh;
+#comment3 h2 {
+  margin-top: 10vh;
 }
 
-#comment4{
-    grid-area: comment4;
-    border-radius: 8px;
-    background-image: url(/img/office-820390_1920.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#comment4 {
+  grid-area: comment4;
+  border-radius: 8px;
+  background-image: url(/img/office-820390_1920.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*Making grid responsive*/
-@media screen and (max-width:550px){
-    .testimonial-grid-container{
-        grid-template-columns: 1fr;
-        grid-template-rows: 4fr;
-        row-gap: 5vh;
-        grid-template-areas: 
-        "comment1"
-        "comment2"
-        "comment4"
-        "comment3"
-       
-    }
+@media screen and (max-width: 550px) {
+  .testimonial-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    row-gap: 5vh;
+    grid-template-areas:
+      "comment1"
+      "comment2"
+      "comment4"
+      "comment3";
+  }
 
-    #comment1{
-        height:70vh;
-    }
-    #comment2{
-        height:70vh;
-        width: 80%;
-    }
-    
-
-    #comment3{
-        height:70vh;
-    }
-    #comment4{
-        height:70vh;
-    }
+  #comment1,
+  #comment2,
+  #comment3,
+  #comment4 {
+    height: 70vh;
+    padding: 20px;
+  }
 }
 
+/*7. Slideshow*/
+/*The container term is equal to a real container, inside you have all 
+elements or objects*/
+.slideshow-container{
+    width: 80%;
+    position: relative;
+    justify-content: center;
+    margin:0 auto;
+    margin-top:5vh;
+    background-color: var(--white);
+    height:90vh;
+    border-radius: 10%;
+}
 
+/*Adjusting the image to fit inside the above container*/
+.slideshow-container img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+    padding: 50px 50px;
+    border-radius: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*Hiding the slides, and then showing them by JS code*/
+.mySlides{
+    display: none;
+}
 
 
 
