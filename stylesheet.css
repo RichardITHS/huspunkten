@@ -191,7 +191,7 @@ body, html{
     
 }
 
-/*Make the navabar responsive*/
+/*Make the navbar responsive*/
 @media screen and (max-width: 400px){
     .navbar{
         flex-direction: column;
