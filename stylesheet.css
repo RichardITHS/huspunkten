@@ -109,3 +109,61 @@ body, html{
 
 /*Above Validated 2022-09-08 11:02*/
 
+/*4. Navbar*/
+/*Navbar with flex method*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height:8vh;
+    width: 100%;
+    position: fixed;
+    align-items: center;
+    margin: 0 auto;
+    background-color: var(--four);
+    /*Placing objects in order/layers*/
+    z-index:999;
+    top:0;
+    left:0;
+    transition: 0.3s ease-in-out;
+}
+
+/*Logo/title settings*/
+.brand-title{
+ font-size: 1.5rem;
+ color:var(--white);
+ font-weight: bold;
+ margin-left: 2vw;
+}
+
+/*Clarify that the backround on the links is in the same color as the navbar itself*/
+.navbar-links{
+    height:100%;
+    background-color:var(four);
+}
+
+/*Adjusting the link settings*/
+
+.navbar-links ul{
+    display:flex;
+    padding:0; 
+}
+
+.navbar-links li{
+    list-style: none;
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    color:var(--white);
+    padding: 1rem;
+    margin:2vw;
+}
+
+
+
+
+
+
+
+
+
