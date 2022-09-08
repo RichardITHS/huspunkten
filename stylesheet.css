@@ -9,6 +9,10 @@
 5. Hero Section (Hero image)
 6. Testimonial Section
 7. Slideshow
+8.  Info Section
+9.  Choose Section
+10. Form
+11. Footer
 */
 
 /*1. Root settings*/
@@ -45,6 +49,7 @@ html {
   /*no overflow*/
   overflow-x: hidden;
   height: 100%;
+  box-sizing: border-box;
   /*Using my pre-decided colors using "var() function*/
   background-color: var(--five);
 }
@@ -104,6 +109,16 @@ html {
 }
 
 /*Above Validated 2022-09-08 11:02*/
+
+/*standard title heading*/
+.title{
+  margin-top: 20vh;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
 
 /*4. Navbar*/
 /*Navbar with flex method*/
@@ -267,126 +282,594 @@ html {
 /*6. Testimonial Section*/
 /*Grid*/
 
-.testimonial-grid-container {
-  /*Decide that this is a grid*/
-  display: grid;
-  /*grid-template-columns*/
+
+  .testimonials-grid-container{
+    display: grid;
+  /*First we declare the columns*/
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  /*grid-template-rows*/
+  /*Next we declare the rows*/
   grid-template-rows: 1fr 1fr;
   gap: 20px;
-  row-gap: 10vh;
+  row-gap: 5vh;
+  margin-top: 5vh;
   margin-right: 10vw;
   margin-left: 10vw;
-  margin-top: 10vh;
-  height: 90vh;
+  height: auto;
+    
+    /*Where do i want each block to be?, how many rows will be used?*/
+    grid-template-areas: 
+    "comment1 comment1 comment2 comment2" 
+    "comment3 comment3 comment4 comment4" 
+   
+ }
 
-  /*Grid area*/
-  grid-template-areas:
-    "comment1 comment1 comment2 comment2"
-    "comment3 comment3 comment4 comment4";
-}
-
-#comment1 {
-  grid-area: comment1;
-  border-radius: 8px;
+ #comment1{
+    /*Give the area*/
+    grid-area: comment1;
+    border-radius: 8px;
   background-image: url(/img/family.jpg);
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#comment2 {
-  /*Always declare what grid area you want the "#item" to be, in this example
-    it is the second column called comment2*/
-  grid-area: comment2;
-  background-color: var(--two);
-  border-radius: 8px;
-  text-align: center;
-  align-items: center;
-  padding-top: 20px;
-  color: var(--white);
-}
-
-#comment2 h2 {
-  margin-top: 10vh;
-}
-
-#comment3 {
-  /*Always declare what grid area you want the "#item" to be, in this example
-    it is the second column called comment2*/
-  grid-area: comment3;
-  background-color: var(--two);
-  border-radius: 8px;
-  text-align: center;
-  align-items: center;
-  padding-top: 20px;
-  color: var(--white);
-}
-
-#comment3 h2 {
-  margin-top: 10vh;
-}
-
-#comment4 {
-  grid-area: comment4;
-  border-radius: 8px;
-  background-image: url(/img/office-820390_1920.jpg);
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  height: 50vh;
+    
+ }
+
+
+ #comment2{
+    background-color: var(--two);
+    /*Give the area*/
+    grid-area: comment2;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    padding-top:20px;
+    color: white;
+
+ }
+
+ #comment2 h2{
+    
+    width: 80%;
+    margin: 0 auto;
+    padding:4vh;
+ }
+ #comment3{
+    background-color: var(--three);
+    /*Give the area*/
+    grid-area: comment3;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    padding-top:20px;
+    color: white;
+
+ }
+ #comment3 h2{
+    
+    width: 80%;
+    margin: 0 auto;
+    padding:4vh;
+ }
+
+ #comment2 p, h2{
+  
+  width: 80%;
+  margin: 0 auto;
+  padding:4vh;
+}
+ #comment4{
+   /*Give the area*/
+   grid-area: comment4;
+   border-radius: 8px;
+ background-image: url(/img/office-820390_1920.jpg);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+
+
+ }
+
+ #comment3 p, h2{
+  
+  width: 80%;
+  margin: 0 auto;
+  padding:4vh;
+}
+/*Section Testimonials Grid Responsive settings*/
+@media only screen and (max-width:550px){
+    .testimonials-grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 4fr;
+        row-gap: 5vh;
+        grid-template-areas: 
+        "comment1"
+        "comment2"
+        "comment4"
+        "comment3"
+     
+    }
+    #comment4{
+      height:50vh;
+     
+     
+      }
+
+      
+        #comment3{
+            height:80vh;
+           
+           
+            }
+
 }
 
-/*Making grid responsive*/
-@media screen and (max-width: 550px) {
-  .testimonial-grid-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 4fr;
-    row-gap: 5vh;
-    grid-template-areas:
-      "comment1"
-      "comment2"
-      "comment4"
-      "comment3";
-  }
+@media only screen and (max-width:550px){
+    #comment2 p, #comment3 p{
+width: 100%;
+padding: 20px;
 
-  #comment1,
-  #comment2,
-  #comment3,
-  #comment4 {
-    height: 70vh;
-    padding: 20px;
-  }
+    }
+
 }
 
 /*7. Slideshow*/
 /*The container term is equal to a real container, inside you have all 
 elements or objects*/
-.slideshow-container{
-    width: 80%;
-    position: relative;
-    justify-content: center;
-    margin:0 auto;
-    margin-top:5vh;
-    background-color: var(--white);
-    height:90vh;
-    border-radius: 10%;
+
+.slideshow-container {
+  width: 80%;
+  position: relative;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 5vh;
+  background-color: #FFFFFF;
+  height: 90vh;
+  border-radius: 10px;
+     
+    }
+  
+  
+  
+    /*Adjusting image*/
+    .slideshow-container img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 50px 50px;
+      width: 80%;
+      border-radius: 10px;
+  
+    }
+  
+    
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+  
+    .mySlides h1, p{
+      margin-top: -2vh;
+     text-align: center;
+    }
+  
+    .mySlides .mySlides-header{
+     font-size: 2rem;  
+  }
+  
+      
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+  
+  
+  /* Slideshow Responsive settings*/
+  /*Section About Grid Responsive settings*/
+  @media only screen and (max-width:750px){
+      .slideshow-container{
+          height:70vh;
+         
+      }
+      .slideshow-container img{
+          width: 99%;
+         
+      }
+   
+    
+  }
+  
+  @media only screen and (max-width:450px){
+      .slideshow-container{
+          height:50vh;
+         
+      }
+      .slideshow-container img{
+          width: 99%;
+         
+      }
+   
+    
+  }
+/* 8. Section Info Grid*/
+
+
+
+.info-grid-container{
+  display: grid;
+  /*First we declare the columns*/
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /*Next we declare the rows*/
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  row-gap: 5vh;
+  margin-top: 5vh;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  height: auto;
+  
+  /*Where do i want each block to be?, how many rows will be used?*/
+  grid-template-areas: 
+  "info1 info1 info2 info2" 
+  "info3 info3 info4 info4" 
+ 
 }
 
-/*Adjusting the image to fit inside the above container*/
-.slideshow-container img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin:0 auto;
-    padding: 50px 50px;
-    border-radius: 10px;
+#info1{
+  /*Give the area*/
+  grid-area: info1;
+  border-radius: 8px;
+background-image: url(/img/jonas-leupe-wlrmQa7Hli8-unsplash.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+  
 }
 
-/*Hiding the slides, and then showing them by JS code*/
-.mySlides{
-    display: none;
+
+#info2{
+  background-color: var(--two);
+  /*Give the area*/
+  grid-area: info2;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top:20px;
+  color: white;
+
 }
+
+#info2 p, h2{
+  
+  width: 80%;
+  margin: 0 auto;
+  padding:4vh;
+}
+#info3{
+  background-color: var(--three);
+  /*Give the area*/
+  grid-area: info3;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top:20px;
+  color: white;
+
+}
+#info3 p,h2{
+  
+  width: 80%;
+  margin: 0 auto;
+  padding:4vh;
+}
+
+#info4{
+ /*Give the area*/
+ grid-area: info4;
+ border-radius: 8px;
+background-image: url(/img/christin-hume-mfB1B1s4sMc-unsplash.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+
+}
+
+
+.download {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-around;
+  margin-bottom: 5vh;
+  
+}
+
+.google {
+  width: 15vw;
+  height: 8vh;
+  background-image: url(/img/google.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+ 
+}
+
+.ios {
+  width: 15vw;
+  background-image: url(/img/ios.png);
+  height: 8vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+}
+/*Section Testimonials Grid Responsive settings*/
+@media only screen and (max-width:550px){
+  .info-grid-container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 4fr;
+      row-gap: 5vh;
+      grid-template-areas: 
+      "info1"
+      "info2"
+      "info4"
+      "info3"
+   
+  }
+  #info4{
+    height:50vh;
+   
+   
+    }
+
+    #info2{
+      height:auto;
+     
+     
+      }#info3{
+          height:80vh;
+         
+         
+          }
+         
+
+}
+
+@media only screen and (max-width:550px){
+  #info2 p, #info3 p{
+width: 100%;
+padding: 20px;
+
+  }
+
+}
+
+/* 9. Section choose grid*/
+
+
+.choose-grid-container{
+  display: grid;
+  /*First we declare the columns*/
+  grid-template-columns: 1fr 1fr 1fr;
+  /*Next we declare the rows*/
+  grid-template-rows: 1fr;
+  gap: 20px;
+  row-gap: 5vh;
+  margin-top: 20vh;
+  margin-right: 10vw;
+  margin-left: 10vw;
+  height: auto;
+  
+  /*Where do i want each block to be?, how many rows will be used?*/
+  grid-template-areas: 
+  "choose1 choose2 choose3" 
+
+ 
+}
+
+#choose1{
+  background-color: var(--white);
+  /*Give the area*/
+  grid-area: choose1;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top:20px;
+  color: black;
+  text-transform: uppercase;
+  
+}
+
+
+
+#choose2{
+  background-color: var(--white);
+  /*Give the area*/
+  grid-area: choose2;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top:20px;
+  color: black;
+  text-transform: uppercase;
+
+}
+
+#choose3{
+  background-color: var(--white);
+  /*Give the area*/
+  grid-area: choose3;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  padding-top:20px;
+  color: black;
+  text-transform: uppercase;
+
+}
+
+
+.choose-title{
+  font-size: 2rem;
+}
+
+.choose-text{
+  display: flex;
+  width: 80%;
+  margin-top:2vh;
+  justify-content: center;
+  margin: auto;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 2vh;
+
+
+}
+/*Section choose Grid Responsive settings*/
+@media only screen and (max-width:550px){
+  .choose-grid-container{
+      grid-template-columns: 1fr;
+      grid-template-rows: 4fr;
+      row-gap: 5vh;
+      grid-template-areas: 
+      "choose1"
+      "choose2"
+      "choose3"
+    
+   
+  }
+}
+
+/*10. Section Form*/
+
+.form{
+  display: flex;
+  justify-content: center;
+  margin-top:20vh;
+
+}
+
+input[type=text], select, textarea {
+width: 100%; /* Full width */
+padding: 12px; /* Some padding */ 
+border: 1px solid #ccc; /* Gray border */
+border-radius: 4px; /* Rounded borders */
+box-sizing: border-box; /* Make sure that padding and width stays in place */
+margin-top: 6px; /* Add a top margin */
+margin-bottom: 16px; /* Bottom margin */
+resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+background-color: #04AA6D;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+}
+
+/* 11. Section Footer*/
+
+/*Footer Grid Container*/
+.Grid__Container {
+  display: grid;
+  margin-top: 40vh;
+  /* 2 columns for smaller screens */
+  grid-template-columns: repeat(2, 1fr);
+  height: 40vh;
+  background-color: var(--four);
+
+
+  
+}
+
+#item1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top:5vh;
+  
+
+}
+#item2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top:5vh;
+
+  
+
+}
+#item3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top:5vh;
+
+  
+
+}
+#item4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top:5vh;
+
+  
+
+}
+
+.Bottom_Column {
+  /* The bottom "row" should span the 2 columns on smaller screens */
+  grid-column: span 2 / span 2;
+  background-color: var(--four);
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top:20vh;
+  
+
+}
+
+@media (min-width: 768px) {
+  .Grid__Container {
+    /* 4 columns for larger screens */
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .Bottom_Column {
+    /* The bottom "row" should span the 4 columns on larger screens */
+    grid-column: span 4;
+  }
+}
+
+/*All above validated by 20220908*/
+/*End of CSS*/
+
+
 
 
 
