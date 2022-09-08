@@ -367,7 +367,10 @@ body, html{
     }
     #comment2{
         height:70vh;
+        width: 80%;
     }
+    
+
     #comment3{
         height:70vh;
     }
